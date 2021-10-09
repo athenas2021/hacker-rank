@@ -11,4 +11,18 @@ import sys
 if __name__ == '__main__':
     n = int(input().strip())
 
-    arr = list(map(int, input().rstrip().split()))
+    string = str(input())
+    list = list()
+    for i in range(len(string)):
+        list = string.split(" ")
+    
+    list.reverse()
+    spaced_string = ''
+    for y in range(len(list)):
+        if y == 0:
+            spaced_string = list[y]
+        else:
+            spaced_string += ' '
+            spaced_string += list[y]
+
+    print(spaced_string)
